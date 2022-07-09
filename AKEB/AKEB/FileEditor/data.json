@@ -1,7 +1,1 @@
-{
-  "numberOfBidders": 1,
-  "numberOfSubmittedBids": 0,
-  "numberOfAskedWinner": 0,
-  "bids": [],
-  "winner": -1000
-}
+{"numberOfBidders": 2, "numberOfSubmittedBids": 2, "numberOfAskedWinner": 0, "bids": ["0.0087", "0.0097"], "winner": "0.0097"}

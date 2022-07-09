@@ -40,4 +40,13 @@ class FileEditor:
 
     def submitBid(self, bid):
         self.bids.append(bid)
+        self.numberOfSubmittedBids += 1
+        self.writeIntoFile()
+
+        if self.numberOfBidders == self.numberOfSubmittedBids:
+            self.findWinner()
+
+    def findWinner(self):
+        self.winner = max(self.bids)
+        print("winner", self.winner)
         self.writeIntoFile()
