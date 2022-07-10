@@ -20,5 +20,6 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('increment-number-of-bidders/', views.incrementNumberOfBidders),
+    path('get-winner/', views.getWinner),
     path('submit-bid/', views.submitBid)
 ]
