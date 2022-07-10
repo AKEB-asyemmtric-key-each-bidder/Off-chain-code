@@ -52,4 +52,25 @@ class FileEditor:
         self.writeIntoFile()
 
     def getWinner(self):
-        return self.winner
+        winnerTemp = self.winner
+
+        if winnerTemp == -1000:
+            return winnerTemp
+
+        self.numberOfAskedWinner += 1
+        self.writeIntoFile()
+
+        # All bidders have asked the bidder winner, hence the data can be deleted
+        if self.numberOfAskedWinner == self.numberOfBidders:
+            self.reset()
+
+        return winnerTemp
+
+    def reset(self):
+        self.numberOfBidders = 0
+        self.numberOfSubmittedBids = 0
+        self.numberOfAskedWinner = 0
+        self.bids = []
+        self.winner = -1000
+
+        self.writeIntoFile()
