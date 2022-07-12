@@ -1,5 +1,4 @@
 import json
-import os
 
 
 class FileEditor:
@@ -37,6 +36,7 @@ class FileEditor:
 
         with open('AKEB/FileEditor/data.json', 'w') as f:
             json.dump(dict, f)
+        f.close()
 
     def submitBid(self, bid):
         self.bids.append(bid)
@@ -49,6 +49,7 @@ class FileEditor:
 
     def findWinner(self):
         self.winner = max(self.bids)
+        # self.winner = min(self.bids)
         self.writeIntoFile()
 
     def getWinner(self):
