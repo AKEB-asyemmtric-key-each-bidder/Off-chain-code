@@ -48,8 +48,9 @@ class FileEditor:
             self.findWinner()
 
     def findWinner(self):
-        self.winner = max(self.bids)
-        # self.winner = min(self.bids)
+        # self.winner = max(self.bids)
+        self.winner = min(self.bids)
+        # self.winner = self.bids[1]
         self.writeIntoFile()
 
     def getWinner(self):
